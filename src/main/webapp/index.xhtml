@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+    <h:head>
+        Salgados Dona Ana
+    </h:head>
+    <div/>
+    <h:form>
+        <br/>
+
+        Coxinha
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+        Risolis
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+        Kibe
+
+        <br/>
+        <h:inputText id="Coxinhas" value="#{calcularSalgadosBean.salgados.qtdCoxinhas}" converter="javax.faces.Double" converterMessage="Insira Um Numero"/>
+        &#160;
+        <h:inputText id="Rizolis" value="#{calcularSalgadosBean.salgados.qtdRizolis}" converter="javax.faces.Double" converterMessage="Insira Um Numero"/>
+        &#160;
+        <h:inputText id="Kibe" value="#{calcularSalgadosBean.salgados.qtdKibe}" converter="javax.faces.Double" converterMessage="Insira Um Numero"/>
+        <br/>
+        Mini-Pizza
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+        Sanduíche
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+        Hot Dog
+        <br/>
+        <h:inputText id="Minipizza" value="#{calcularSalgadosBean.salgados.qtdMiniPizza}" converter="javax.faces.Double" converterMessage="Insira Um Numero"/>
+        &#160;
+        <h:inputText id="Sanduiche" value="#{calcularSalgadosBean.salgados.qtdSanduiche}" converter="javax.faces.Double" converterMessage="Insira Um Numero"/>
+        &#160;
+        <h:inputText id="HotDog" value="#{calcularSalgadosBean.salgados.qtdHotDog}" converter="javax.faces.Double" converterMessage="Insira Um Numero"/>
+        <br/>
+        <br/>
+        <h:selectBooleanCheckbox id="Decoracao" value="#{calcularSalgadosBean.salgados.decoracao}" >
+            <f:selectItem />
+        </h:selectBooleanCheckbox>
+        Inclui Decoração
+        <br/>
+        <br/>
+        <h:commandButton id="Calcular" value="Calcular" action="#{calcularSalgadosBean.calcular}"/>
+        &#160;
+        <h:commandButton id="Limpar"  value="Limpar"/>
+
+    </h:form>
+    <br/>
+    <br/>
+    Valor a Pagar:
+    <h:outputText value="#{calcularSalgadosBean.valor}">
+        <f:convertNumber type="currency"/>
+    </h:outputText>
+
+
+</f:view>
+</html>
